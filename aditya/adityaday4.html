@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+.adi-3-container {
+  max-width: 1320px;
+  margin: auto;
+  margin-top: 45px;
+  padding-top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.adi3-sidebar {
+  width: 360px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border: 1px solid #e7e6e6;
+  border-rmainus: 20px;
+  -webkit-box-shadow: 0px 10px 40px 0px #0000000d;
+          box-shadow: 0px 10px 40px 0px #0000000d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 35px 31px;
+}
+
+.adi3-sidebar p:first-child {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14.88px;
+  line-height: 28.13px;
+  color: #05073c;
+}
+
+.adi3-sidebar p:first-child span {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 18.75px;
+  line-height: 37.5px;
+  color: #05073c;
+}
+
+.adi3-sidebar p:nth-of-type(2) {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 17.44px;
+  line-height: 27px;
+  color: #05073c;
+}
+
+.adi3-sidebar button {
+  font-family: "Inter", sans-serif;
+  text-align: left;
+  font-size: 14.41;
+  font-weight: 500;
+  line-height: 28;
+  color: #ffffff;
+  width: 100%;
+  height: 62px;
+  border-rmainus: 12px;
+  background-color: #eb662b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: none;
+}
+
+.sidebar-duration {
+  border: 1px solid #dddddd;
+  border-rmainus: 12px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.sidebar-duration .adi3-main-1-item {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.tickets {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1fr;
+      grid-template-columns: 2fr 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+.tickets > div:last-child {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+}
+
+.tickets > div:last-child div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tickets > div:last-child div p {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26.25px;
+  color: #05073c;
+}
+
+.tickets > div:first-child {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+}
+
+.tickets > div:first-child p {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 13.34px;
+  line-height: 26.25px;
+  color: #05073c;
+}
+
+.tickets > div:first-child p span {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 13.34px;
+  line-height: 26.25px;
+  color: #05073c;
+}
+
+.tickets .ticket-box {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #e7e6e6;
+  border-rmainus: 30px;
+}
+
+.total {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.total span:first-child {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 16.88px;
+  line-height: 33.75px;
+  color: #05073c;
+}
+
+.total span:last-child {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 17.72px;
+  line-height: 33.75px;
+  color: #05073c;
+}
+
+.adi3-main {
+  max-width: 880px;
+  padding: 0px 65px 15px 15px;
+}
+
+.adi3-main .adi3-main-1 {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.adi3-main-1-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.adi3-main-1-item .adi3-main-1-itembox {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #e7e6e6;
+  border-rmainus: 12px;
+  margin-right: 10px;
+}
+
+.adi3-main-1-item .adi3-main-1-itemtext {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.adi3-main-1-itemtext-first {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14.77px;
+  line-height: 24px;
+  color: #05073c;
+}
+
+.adi3-main-1-itemtext-second {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 13.45px;
+  line-height: 22.4px;
+  color: #05073c;
+  color: #717171;
+}
+
+.adi-3-main-2 {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  border-bottom: 1px solid #e7e6e6;
+}
+
+.adi-3-main-2 h1 {
+  font-family: "Inter", sans-serif;
+  font-size: 29.18px;
+  font-weight: 700;
+  line-height: 45px;
+  text-align: left;
+  color: #05073c;
+  margin-bottom: 24px;
+}
+
+.adi-3-main-2 p {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14.41px;
+  line-height: 28.13px;
+  color: #05073c;
+}
+
+.adi-3-main-2 h3 {
+  font-family: Inter;
+  font-size: 19.22px;
+  font-weight: 500;
+  line-height: 30px;
+  text-align: left;
+  color: #05073c;
+}
+
+.adi-3-main-2 ul li {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14.53px;
+  line-height: 28.13px;
+  color: #05073c;
+}
+
+.adi-3-main-3 {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  border-bottom: 1px solid #e7e6e6;
+}
+
+.adi-3-main-3 h1 {
+  font-family: "Inter", sans-serif;
+  font-size: 29.18px;
+  font-weight: 700;
+  line-height: 45px;
+  text-align: left;
+  color: #05073c;
+  margin-bottom: 24px;
+}
+
+.adi-3-main-3-grid {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  -webkit-column-gap: 80px;
+          column-gap: 80px;
+}
+
+.adi-3-main-3-grid .adi-3-main-3-grid-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.adi-3-main-3-grid .adi-3-main-3-grid-item p {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14.41px;
+  line-height: 28.13px;
+  color: #05073c;
+}
+
+.adi-3-main-3-grid .adi-3-main-3-grid-item:nth-child(-n + 6) .adi-3-main-3-grid-item-marker {
+  height: 24px;
+  width: 24px;
+  border-rmainus: 24px;
+  margin-right: 15px;
+  background-color: #eff7f1;
+}
+
+.adi-3-main-3-grid .adi-3-main-3-grid-item:nth-last-child(-n + 3) .adi-3-main-3-grid-item-marker {
+  height: 24px;
+  width: 24px;
+  border-rmainus: 24px;
+  margin-right: 15px;
+  background-color: #ffe5e5;
+}
+
+.adi-3-main-4 {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  border-bottom: 1px solid #e7e6e6;
+}
+
+.adi-3-main-4 h1 {
+  font-family: "Inter", sans-serif;
+  font-size: 29.18px;
+  font-weight: 700;
+  line-height: 45px;
+  text-align: left;
+  color: #05073c;
+  margin-bottom: 24px;
+  margin-bottom: 0;
+}
+
+.itinerary-grid {
+  display: -ms-grid;
+  display: grid;
+  padding-left: 15px;
+}
+
+.itinerary-grid .itinerary-grid-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 45px;
+  border-left: 1px dashed #eb662b;
+}
+
+.itinerary-grid .itinerary-grid-item p {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 15.36px;
+  line-height: 30px;
+  color: #05073c;
+  margin: 0;
+}
+
+.itinerary-grid .itinerary-grid-item:last-child {
+  padding: 0;
+}
+
+.itinerary-grid .itinerary-grid-item .itinerary-grid-item-box {
+  height: 18px;
+  width: 18px;
+  border-rmainus: 18px;
+  border: 3px solid #eb662b;
+  margin-right: 15px;
+  margin-left: -13px;
+  background-color: white;
+}
+
+.itinerary-grid .itinerary-grid-item:first-child .itinerary-grid-item-box,
+.itinerary-grid .itinerary-grid-item:last-child .itinerary-grid-item-box {
+  width: 30px;
+  height: 30px;
+  border-rmainus: 30px;
+  background-color: #eb662b;
+  margin-left: -18px;
+}
+
+.itinerary-grid .itinerary-grid-item:nth-child(3) {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.itinerary-grid .itinerary-grid-item:nth-child(3) div:last-child p:first-child {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 15.36px;
+  line-height: 30px;
+  color: #05073c;
+  margin-bottom: 19px;
+}
+
+.itinerary-grid .itinerary-grid-item:nth-child(3) div:last-child p:last-child {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14.53px;
+  line-height: 28.13px;
+  color: #05073c;
+  width: 566px;
+}
+
+.adi-3-main-5 {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  border-bottom: 1px solid #e7e6e6;
+}
+
+.adi-3-main-5 h1 {
+  font-family: "Inter", sans-serif;
+  font-size: 29.18px;
+  font-weight: 700;
+  line-height: 45px;
+  text-align: left;
+  color: #05073c;
+  margin-bottom: 24px;
+}
+
+.adi-3-main-5 .tour-map-div {
+  width: 850px;
+  height: 550px;
+}
+
+.adi-3-main-5 .tour-map-div img {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: #05073c;
+}
+    </style>
+</head>
+<body>
+      <div class="adi-3-container">
+        <div class="adi3-main" id="adi3container1">
+          <div class="adi3-main-1">
+            <div class="adi3-main-1-item">
+              <div class="adi3-main-1-itembox"></div>
+              <div class="adi3-main-1-itemtext">
+                <span class="adi3-main-1-itemtext-first">Duration</span>
+                <span class="adi3-main-1-itemtext-second">3 days</span>
+              </div>
+            </div>
+            <div class="adi3-main-1-item">
+              <div class="adi3-main-1-itembox"></div>
+              <div class="adi3-main-1-itemtext">
+                <span class="adi3-main-1-itemtext-first">Group Size</span>
+                <span class="adi3-main-1-itemtext-second">10 people</span>
+              </div>
+            </div>
+            <div class="adi3-main-1-item">
+              <div class="adi3-main-1-itembox"></div>
+              <div class="adi3-main-1-itemtext">
+                <span class="adi3-main-1-itemtext-first">Ages</span>
+                <span class="adi3-main-1-itemtext-second">18-99 yrs</span>
+              </div>
+            </div>
+            <div class="adi3-main-1-item">
+              <div class="adi3-main-1-itembox"></div>
+              <div class="adi3-main-1-itemtext">
+                <span class="adi3-main-1-itemtext-first">Languages</span>
+                <span class="adi3-main-1-itemtext-second">English, Japanese</span>
+              </div>
+            </div>
+          </div>
+          <div class="adi-3-main-2">
+            <h1>Tour Overview</h1>
+            <p>
+              The Phi Phi archipelago is a must-visit while in Phuket, and this
+              speedboat trip whisks you around the islands in one day. Swim over
+              the coral reefs of Pileh Lagoon, have lunch at Phi Phi Leh, snorkel
+              at Bamboo Island, and visit Monkey Beach and Maya Bay, immortalized
+              in "The Beach." Boat transfers, snacks, buffet lunch, snorkeling
+              equipment, and Phuket hotel pickup and drop-off all included.
+            </p>
+            <h3>Tour Highlights</h3>
+            <ul>
+              <li>
+                Experience the thrill of a speedboat to the stunning Phi Phi
+                Islands
+              </li>
+              <li>Be amazed by the variety of marine life in the archepelago</li>
+              <li>
+                Enjoy relaxing in parmainse with white sand beaches and azure
+                turquoise water
+              </li>
+              <li>Feel the comfort of a tour limited to 35 passengers</li>
+              <li>Catch a glimpse of the wild monkeys around Monkey Beach</li>
+            </ul>
+          </div>
+          <div class="adi-3-main-3">
+            <h1>What's included</h1>
+            <div class="adi-3-main-3-grid">
+              <div class="adi-3-main-3-grid-item">
+                <div class="adi-3-main-3-grid-item-marker"></div>
+                <p>Beverages, drinking water, morning tea and buffet lunch</p>
+              </div>
+              <div class="adi-3-main-3-grid-item">
+                <div class="adi-3-main-3-grid-item-marker"></div>
+                <p>Local taxes</p>
+              </div>
+              <div class="adi-3-main-3-grid-item">
+                <div class="adi-3-main-3-grid-item-marker"></div>
+                <p>Hotel pickup and drop-off by air-conditioned minivan</p>
+              </div>
+              <div class="adi-3-main-3-grid-item">
+                <div class="adi-3-main-3-grid-item-marker"></div>
+                <p>InsuranceTransfer to a private pier</p>
+              </div>
+              <div class="adi-3-main-3-grid-item">
+                <div class="adi-3-main-3-grid-item-marker"></div>
+                <p>Soft drinks</p>
+              </div>
+              <div class="adi-3-main-3-grid-item">
+                <div class="adi-3-main-3-grid-item-marker"></div>
+                <p>Tour Guide</p>
+              </div>
+              <div class="adi-3-main-3-grid-item">
+                <div class="adi-3-main-3-grid-item-marker"></div>
+                <p>Towel</p>
+              </div>
+              <div class="adi-3-main-3-grid-item">
+                <div class="adi-3-main-3-grid-item-marker"></div>
+                <p>Tips</p>
+              </div>
+              <div class="adi-3-main-3-grid-item">
+                <div class="adi-3-main-3-grid-item-marker"></div>
+                <p>Alcoholic Beverages</p>
+              </div>
+            </div>
+          </div>
+          <div class="adi-3-main-4">
+            <h1>Itinerary</h1>
+            <div class="itinerary-grid">
+              <div class="itinerary-grid-item">
+                <div class="itinerary-grid-item-box"></div>
+                <p>Day 1: Airport Pick Up</p>
+              </div>
+              <div class="itinerary-grid-item">
+                <div class="itinerary-grid-item-box"></div>
+                <p>Day 2: Temples & River Cruise</p>
+              </div>
+              <div class="itinerary-grid-item">
+                <div class="itinerary-grid-item-box"></div>
+                <div>
+                  <p>Day 3: Massage & Overnight Train</p>
+                  <p>
+                    Like on all of our trips, we can collect you from the airport
+                    when you land and take you directly to your hotel. The first
+                    Day is just a check-in Day so you have this freedom to explore
+                    the city and get settled in.
+                  </p>
+                </div>
+              </div>
+              <div class="itinerary-grid-item">
+                <div class="itinerary-grid-item-box"></div>
+                <p>Day 4: Khao Sok National Park</p>
+              </div>
+              <div class="itinerary-grid-item">
+                <div class="itinerary-grid-item-box"></div>
+                <p>Day 5: Travel to Koh Phangan</p>
+              </div>
+              <div class="itinerary-grid-item">
+                <div class="itinerary-grid-item-box"></div>
+                <p>Day 6: Morning Chill & Muay Thai Lesson</p>
+              </div>
+              <div class="itinerary-grid-item">
+                <div class="itinerary-grid-item-box"></div>
+                <p>Day 7: Island Boat Trip</p>
+              </div>
+            </div>
+          </div>
+          <div class="adi-3-main-5">
+            <h1>Tour Map</h1>
+            <div class="tour-map-div">
+              <img src="image/tour_map.png" alt="" />
+            </div>
+          </div>          
+        </div>
+        <div class="adi3-sidebar">
+          <p>From <span>$1200</span></p>
+          <div class="sidebar-duration">
+            <div class="adi3-main-1-item">
+              <div class="adi3-main-1-itembox"></div>
+              <div class="adi3-main-1-itemtext">
+                <span class="adi3-main-1-itemtext-first">From</span>
+                <span class="adi3-main-1-itemtext-second">February 05 ~ March 14</span>
+              </div>
+            </div>
+            <hr />
+            <div class="adi3-main-1-item">
+              <div class="adi3-main-1-itembox"></div>
+              <div class="adi3-main-1-itemtext">
+                <span class="adi3-main-1-itemtext-first">Time</span>
+                <span class="adi3-main-1-itemtext-second">Choose Time</span>
+              </div>
+            </div>
+          </div>
+          <p>Tickets</p>
+          <div class="tickets">
+            <div>
+              <p>Adult (18+ years) <span>$282.00</span></p>
+              <p>Adult (18+ years) <span>$282.00</span></p>
+              <p>Adult (18+ years) <span>$282.00</span></p>
+            </div>
+            <div>
+              <div>
+                <div class="ticket-box"></div>
+                <p>3</p>
+                <div class="ticket-box"></div>
+              </div>
+              <div>
+                <div class="ticket-box"></div>
+                <p>3</p>
+                <div class="ticket-box"></div>
+              </div>
+              <div>
+                <div class="ticket-box"></div>
+                <p>3</p>
+                <div class="ticket-box"></div>
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div class="total">
+            <span>Total:</span>
+            <span>$530.00</span>
+          </div>
+          <button>Book Now</button>
+        </div>
+      </div>   
+</body>
+</html>

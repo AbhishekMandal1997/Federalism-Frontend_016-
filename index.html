@@ -126,14 +126,17 @@
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        background-color: white;
+        background-color: black;
         padding: 10px;
+        color: white;
       }
       .adi-1st-nav ul {
         margin: 0 15px; /* Adjust spacing between items */
         cursor: pointer; /* If these are links */
         font-size: 12px;
+        
       }
+      
       .adi-2nd-nav {
         display: flex;
         flex-wrap: wrap;
@@ -202,17 +205,29 @@
         color: white; /* Change text color on hover */
       }
       .adi-4th-nav {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        align-items: center;
-        color: rgba(255, 255, 255, 0.618); /* Adjust text color */
-        background-color: black;
-        padding: 10px;
-        position: sticky;
-        top: 0; /* Sticks the element to the top of its container */
-        z-index: 1000; /* Ensures it stays on top of other content */
-      }
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: center;
+      color: rgba(255, 255, 255, 0.618); /* Adjust text color */
+      background-color: black;
+      padding: 10px;
+     
+      position: sticky;
+      top: 10px; /* Sticks the element to the top of its container */
+      z-index: 1; /* Ensures it stays on top of other content */
+    }
+
+    .adi-4th-nav ul {
+      list-style: none;
+      margin: 0 10px; /* Adjust spacing as needed */
+      padding: 0;
+    }
+
+    .adi-4th-nav a {
+      color: inherit;
+      text-decoration: none;
+    }
       .slider {
         width: 100%;
         height: 600px;
@@ -313,7 +328,7 @@
         .adi-2nd-nav ul {
           padding: 5px;
         }
-        .slider {
+        .slider { 
           height: 300px;
         }
         .slider img {
@@ -662,121 +677,72 @@
         </div>
     </nav> -->
     <nav>
-        <div class="adi-container">
-          
-          <label class="hamburger" for="menu-toggle">
-            <div></div>
-            <div></div>
-            <div></div>
-          </label>
-          <div class="adi-1st-nav">
-            <ul>
-              Support
-            </ul>
-            <ul>
-              Corporate
-            </ul>
-          </div>
-          <div class="adi-2nd-nav">
-            <ul>
-              <img src="./bootstrap/images/watches logo.jpg" alt="logo" />
-            </ul>
-            <ul>
-              watchcraft
-            </ul>
-            <ul>
-              Watches
-            </ul>
-            <ul>
-              Electronic Musical Instruments
-            </ul>
-            <ul>
-              Calculators
-            </ul>
-            <ul>
-              Label Printers & Others
-            </ul>
-            <ul>
-              <input type="text" placeholder="Search" />
-              <i class="fas fa-search"></i>
-            </ul>
-            <ul>
-              <i class="far fa-heart"></i>
-            </ul>
-          </div>
-  
-          <div class="slider">
-            <img src="./bootstrap/images/watches01.jpg" alt="watch1" />
-            <img src="./bootstrap/images/watchcraft2.png" alt="watch2" />
-            <img src="./bootstrap/images/watches03.jpg" alt="watch3" />
-            <img src="./bootstrap/images/watches02.jpg" alt="watch4" />
-            <a class="arrow left" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="arrow right" onclick="plusSlides(1)">&#10095;</a>
-          </div>
-          <div class="text-container">
-            <pre><span class="actual-text" >&nbsp;WatchCraft
- <span style="font-size: 30px; ">premium Watches</span>&nbsp;</span></pre> 
-                 <span class="hover-text">&nbsp; &nbsp;</span>
-          </div>
-          <div class="adi-3rd-nav">
-            <ul>
-              <h1>WatchCraft</h1>
-            </ul>
-            <ul>
-              WatchCraft Brand Site
-            </ul>
-            <ul>
-              Store Search
-            </ul>
-            <ul>
-              Support
-            </ul>
-            <ul>
-              Services<a class="arrow-down" onclick="scrollToNextSection()"
-                >&#9660;</a
-              >
-            </ul>
-          </div>
-          <hr />
-          <div class="adi-4th-nav">
-            <ul>
-              <a onclick="plusSlides(-1)">&#10094;</a>
-              New Products
-            </ul>
-            <ul>
-              <h2>WatchCraft</h2>
-            </ul>
-            <ul>
-              BABY-G
-            </ul>
-            <ul>
-              PRO TREK
-            </ul>
-            <ul>
-              EDIFICE
-            </ul>
-            <ul>
-              SHEEN
-            </ul>
-            <ul>
-              CASIO
-            </ul>
-            <ul>
-              Vintage
-            </ul>
-            <ul>
-              ENTICER
-            </ul>
-            <ul>
-              Youth
-            </ul>
-            <ul>
-              Clock
-            </ul>
-          </div>
-          <hr />
+      <div class="adi-container">
+        <label class="hamburger" for="menu-toggle">
+          <div></div>
+          <div></div>
+          <div></div>
+        </label>
+        <div class="adi-1st-nav">
+          <ul>Support</ul>
+          <ul>Corporate</ul>
         </div>
-      </nav>
+        <div class="adi-2nd-nav">
+          <ul>
+            <img src="images/watches logo.jpg" alt="logo" />
+          </ul>
+          <ul>watchcraft</ul>
+          <ul>Watches</ul>
+          <ul>Electronic Musical Instruments</ul>
+          <ul>Calculators</ul>
+          <ul>Label Printers & Others</ul>
+          <ul>
+            <input type="text" placeholder="Search" />
+            <i class="fas fa-search"></i>
+          </ul>
+          <ul>
+            <i class="far fa-heart"></i>
+          </ul>
+        </div>
+        <div class="slider">
+          <img src="images/watches01.jpg" alt="watch1" />
+          <img src="images/watches02.jpg" alt="watch2" />
+          <img src="images/watchcraft2.png" alt="watch3" />
+          <img src="images/watches03.jpg" alt="watch4" />
+          <a class="arrow left" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="arrow right" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <div>
+          <img style="width: 100%; height: 600px" src="images/watchcraft2.png" alt="" />
+        </div>
+        <div class="adi-3rd-nav">
+          <ul><h1>WatchCraft</h1></ul>
+          <ul>WatchCraft Brand Site</ul>
+          <ul>Store Search</ul>
+          <ul>Support</ul>
+          <ul>Services<a class="arrow-down" onclick="scrollToNextSection()">&#9660;</a></ul>
+        </div>
+        <hr />
+        <div class="adi-4th-nav">
+          <ul>
+            <a onclick="plusSlides(-1)">&#10094;</a>
+            New Products
+          </ul>
+          <ul><h2>WatchCraft</h2></ul>
+          <ul>BABY-G</ul>
+          <ul>PRO TREK</ul>
+          <ul>EDIFICE</ul>
+          <ul>SHEEN</ul>
+          <ul>CASIO</ul>
+          <ul>Vintage</ul>
+          <ul>ENTICER</ul>
+          <ul>Youth</ul>
+          <ul>Clock</ul>
+        </div>
+        <hr />
+            
+      </div>
+    </nav>
 <!-- -----------------------------------------------------Main--------------------------------------- -->
     <main>
         <div class="parent-container">
