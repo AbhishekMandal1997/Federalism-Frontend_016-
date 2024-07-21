@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casio Watchcraft Watches</title>
+    <link rel="stylesheet" href="projectStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            height: 100vh;
+            overflow-x: hidden;
+            background-color: black;
+            color: white;
+        }
+
+        .brand {
+            position: relative;
+            width: 100%;
+            max-width: 1300px; /* Limit max width for larger screens */
+            height: 200px;
+            overflow: hidden;
+            margin: auto;
+            margin-bottom: 80px;
+            border: 1px solid white;
+        }
+
+        .brand-images {
+            display: flex;
+            width: calc(150px * 20); /* 10 images + 10 duplicate images */
+            height: 100%;
+            animation: scroll 20s linear infinite;
+        }
+
+        .brand-images img {
+            margin: 15px;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            animation: bounce 1s ease infinite;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 10px;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        @keyframes bounce {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .brand:hover .brand-images {
+            animation-play-state: paused;
+        }
+
+        .brand-images img:hover {
+            transform: scale(1.2) translateY(-10px);
+            box-shadow: 0 4px 12px rgba(154, 155, 74, 0.5), 0px 2px 8px rgba(224, 75, 82, 0.5), 0px 4px 16px rgba(224, 75, 82, 0.5);
+            animation-play-state: paused;
+        }
+
+        .partnership-heading {
+            background-color: black;
+            width: 100%;
+            margin: auto;
+            color: white;
+            text-align: center;
+        }
+
+        .partnership-heading h1 {
+            padding: 10px;
+            font-size: 50px;
+            font-family: sans-serif;
+        }
+
+        @media (max-width: 768px) {
+            .brand {
+                width: 90%;
+            }
+
+            .partnership-heading h1 {
+                font-size: 36px;
+            }
+
+            .partnership-heading {
+                margin-bottom: 20px;
+            }
+
+            .brand-images img {
+                margin: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .brand {
+                width: 100%;
+            }
+
+            .partnership-heading h1 {
+                font-size: 28px;
+            }
+
+            .brand-images img {
+                margin: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="partnership-heading">
+        <h1>New Arrivals Showcase</h1>
+    </div>
+    <div class="partnership-heading">
+        <h1>Luxury Partnerships</h1>
+    </div>
+    <div class="brand">
+        <div class="brand-images">
+            <!-- First set of images -->
+            <img src="https://r.mobirisesite.com/573247/assets/images/photo-1617727553252-65863c156eb0.jpeg" alt="Image 1">
+            <img src="https://r.mobirisesite.com/573247/assets/images/photo-1554463529-e27854014799.jpeg" alt="Image 2">
+            <img src="https://r.mobirisesite.com/573247/assets/images/photo-1529612700005-e35377bf1415.jpeg" alt="Image 3">
+            <img src="https://r.mobirisesite.com/573247/assets/images/photo-1606136968306-ab2868cc1f21.jpeg" alt="Image 4">
+            <img src="https://r.mobirisesite.com/573247/assets/images/photo-1681415851723-dca11d0ec9a6.jpeg" alt="Image 5">
+            <img src="https://r.mobirisesite.com/573247/assets/images/photo-1596622723231-b20320c7346b.jpeg" alt="Image 6">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMa2G4bIWAM7W454k-Iw68JNpFOj1uoJ9uMQ&s" alt="Image 7">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSIAn9MfihJ8M1RibPFE54wwo-xBN6CZdIuw&s" alt="Image 8">
+            <img src="https://www.logodesignteam.com/blog/wp-content/uploads/2018/09/coca-cola-logo.jpg" alt="Image 9">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZfhdRHIU3wYPUbtoUms252ntPLpZJJi1NKg&s" alt="Image 10">
+            <!-- Duplicated set of images for seamless scrolling -->
+            <img src="https://r.mobirisesite.com/573247/assets/images/photo-1617727553252-65863c156eb0.jpeg" alt="Image 1">
+            <img src="https://r.mobirisesite.com/573247/assets/images/photo-1554463529-e27854014799.jpeg" alt="Image 2">
+            <img src="https://r.mobirisesite.com/573247/assets/images/photo-1529612700005-e35377bf1415.jpeg" alt="Image 3">
+            <img src="https://r.mobirisesite.com/573247/assets/images/photo-1606136968306-ab2868cc1f21.jpeg" alt="Image 4">
+            <img src="https://r.mobirisesite.com/573247/assets/images/photo-1681415851723-dca11d0ec9a6.jpeg" alt="Image 5">
+            <img src="https://r.mobirisesite.com/573247/assets/images/photo-1596622723231-b20320c7346b.jpeg" alt="Image 6">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMa2G4bIWAM7W454k-Iw68JNpFOj1uoJ9uMQ&s" alt="Image 7">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSIAn9MfihJ8M1RibPFE54wwo-xBN6CZdIuw&s" alt="Image 8">
+            <img src="https://www.logodesignteam.com/blog/wp-content/uploads/2018/09/coca-cola-logo.jpg" alt="Image 9">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZfhdRHIU3wYPUbtoUms252ntPLpZJJi1NKg&s" alt="Image 10">
+        </div>
+    </div>
+</body>
+
+</html>
