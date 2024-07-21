@@ -1,0 +1,1404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Details</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: black;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px auto;
+            max-width: 1300px;
+        }
+
+        .availability-calendar,
+        .faq,
+        .customer-reviews {
+            margin-bottom: 40px;
+        }
+        .customer-reviews{
+            padding-right: 700px;
+        }
+        h2 {
+            margin-bottom: 20px;
+            color: black;
+        }
+
+        .calendar {
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .month {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .month-title {
+            font-weight: bold;
+        }
+
+        .calendar table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .calendar th,
+        .calendar td {
+            padding: 8px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+        }
+
+        .faq-item h3 {
+            cursor: pointer;
+            color: black;
+        }
+
+        .customer-reviews h2 {
+            margin-bottom: 20px;
+            color: #1e1f24;
+        }
+
+        .review-summary {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: #fff7f5;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .overall-rating {
+            flex: 1 1 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #fff0ed;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .rating-details {
+            flex: 1 1 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .rating-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #fff7f5;
+            border-radius: 8px;
+        }
+
+        .rating-title {
+            font-weight: bold;
+        }
+
+        .rating-value {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .rating-description {
+            font-size: 14px;
+            color: #888;
+            margin-left: 10px;
+        }
+
+        .review {
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .reviewer {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .review-images {
+            display: flex;
+            gap: 10px;
+            margin: 10px 0;
+            flex-wrap: wrap;
+        }
+
+        .review-images img {
+            width: 100px;
+            height: 100px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .review-feedback {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .review-feedback span {
+            cursor: pointer;
+            color: black;
+        }
+
+        .reply-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 83%;
+            margin: auto;
+        }
+
+        .reply-container h2 {
+            color: #1e1f24;
+        }
+
+        .reply-container p {
+            color: #555;
+        }
+
+        .reply-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .rating-categories {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .rating-categories span {
+            font-weight: bold;
+            flex: 1 1 auto;
+            margin: 5px 0;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .form-group input {
+            max-width: 100%;
+        }
+
+        .form-group input:nth-child(2) {
+            margin-left: 0;
+        }
+
+        .form-group textarea {
+            resize: none;
+        }
+
+            
+        
+        button {
+            background-color: #ff7a18;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: fit-content;
+            align-self: flex-start;
+
+        }
+
+        button:hover {
+            background-color: #e66b12;
+        }
+
+        @media (max-width: 768px) {
+            .overall-rating,
+            .rating-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .rating-value,
+            .rating-description {
+                margin-left: 0;
+            }
+
+            .review-images img {
+                width: 80px;
+                height: 80px;
+            }
+           
+            
+        }
+        h2 {
+    text-align: left;
+    color: #343a40;
+}
+
+.card-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    min-width: 250px;
+    flex: 1 1 calc(25% - 20px);
+    margin-bottom: 20px;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-info {
+    padding: 15px;
+}
+
+.card-info p {
+    margin: 5px 0;
+    color: #6c757d;
+}
+
+.card-info h3 {
+    margin: 10px 0;
+    color: #343a40;
+}
+
+.rating {
+    font-weight: bold;
+}
+
+.duration, .price {
+    color: #007bff;
+}
+
+@media (max-width: 1200px) {
+    .card {
+        flex: 1 1 calc(33.333% - 20px);
+    }
+}
+
+@media (max-width: 900px) {
+    .card {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 600px) {
+    .card {
+        flex: 1 1 100%;
+    }
+}
+.footer {
+    background-color:#fef7f4;
+    padding: 20px 0;
+    color: #343a40;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid ;
+}
+
+.footer-top p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.footer-top a {
+    color: #ff5722;
+    text-decoration: none;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+
+.footer-column {
+    flex: 1 1 calc(25% - 20px);
+    margin-bottom: 20px;
+}
+
+.footer-column h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.footer-column p, .footer-column a, .footer-column li {
+    margin: 5px 0;
+    color: #6c757d;
+}
+
+.footer-column a {
+    text-decoration: none;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column form {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-column input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #eaeaea;
+    border-radius: 4px;
+}
+
+.footer-column button {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.footer-column button:hover {
+    background-color: #0056b3;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    padding: 20px 0;
+    border-top: 1px solid ;
+    padding-top: 100px;
+    
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 14px;
+    color: #6c757d;
+}
+
+.footer-bottom img {
+    max-height: 30px;
+    padding-right: 50px;
+    
+}
+
+.maheshfooter{
+  padding-left: 900px;
+}
+
+
+/* Responsive design */
+@media (max-width: 1200px) {
+    .footer-column {
+        flex: 1 1 calc(33.333% - 20px);
+    }
+}
+
+@media (max-width: 900px) {
+    .footer-column {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-top {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-column {
+        flex: 1 1 100%;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: start;
+    }
+    
+}  
+
+h2 {
+    color: #343a40;
+    margin-bottom: 20px;
+}
+
+.itinerary {
+    margin-bottom: 40px;
+}
+
+.day {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #ff5722;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+.content {
+    max-width: calc(100% - 45px);
+}
+
+.content h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: #343a40;
+}
+
+.content p {
+    margin: 0;
+    color: #6c757d;
+}
+
+.map {
+    margin-bottom: 40px;
+}
+
+@media (max-width: 600px) {
+    .day {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .circle {
+        margin-bottom: 10px;
+    }
+
+    .content {
+        max-width: 100%;
+    }
+}
+.aa-container {
+   
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.info-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.info-box {
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1;
+    min-width: 150px;
+    margin: 10px;
+}
+
+.info-title {
+    font-weight: bold;
+    color: #333;
+}
+
+.info-detail {
+    color: #666;
+}
+
+.main-content {
+    flex: 1;
+    min-width: 600px;
+}
+
+.tour-overview, .tour-highlights, .whats-included, .booking-section {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.tour-overview h2, .tour-highlights h3, .whats-included h3, .booking-section h4 {
+    margin-bottom: 10px;
+}
+
+.tour-highlights ul, .whats-included ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.booking-section {
+    max-width: 300px;
+    flex: none;
+    align-self: flex-start;
+}
+
+.price {
+    font-size: 24px;
+    color: #ff6600;
+    margin-bottom: 10px;
+}
+
+.date-picker {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.date-picker label {
+    margin-bottom: 5px;
+}
+
+.date-picker input {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.tickets, .add-extra {
+    margin-bottom: 20px;
+}
+
+.ticket-option, .extra-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.ticket-option label, .extra-option label {
+    flex: 1;
+}
+
+.ticket-option input, .extra-option input {
+    width: 60px;
+    padding: 5px;
+    text-align: right;
+}
+
+.total-price {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.book-now {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.book-now:hover {
+    background-color: #e65c00;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-content, .booking-section {
+        width: 100%;
+        max-width: none;
+        margin-bottom: 20px;
+    }
+
+    .main-content {
+        min-width: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .info-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-box {
+        margin: 10px 0;
+    }
+}
+.header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .details {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .abhi-images {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .abhi-images img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .main-image {
+            flex: 2;
+        }
+
+        .secondary-images {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .secondary-images img {
+            flex: 1;
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .images {
+                flex-direction: column;
+            }
+
+            .main-image,
+            .secondary-images {
+                flex: none;
+            }
+        }
+        .abhi-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .abhi-header a {
+            text-decoration: none;
+            color: #000;
+            margin: 5px 10px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            max-height: 40px;
+            margin-right: 10px;
+        }
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
+        .nav-links a {
+            margin: 0 15px;
+        }
+        .abhi-buttons {
+            display: flex;
+            align-items: center;
+        }
+        .abhi-buttons button {
+            border: none;
+            padding: 10px 15px;
+            margin: 0 5px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .bestseller {
+            background-color: orange;
+            color: white;
+        }
+        .free-cancellation {
+            background-color: lightgray;
+            color: black;
+        }
+        .abhi-breadcrumb {
+            margin: 20px 0;
+        }
+        .abhi-breadcrumb a {
+            text-decoration: none;
+            color: #000;
+        }
+        .abhi-breadcrumb span {
+            margin: 0 5px;
+        }
+        .title>h5{
+            text-align: end;
+            margin-bottom: 20px;
+        }
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .abhi-images {
+                flex-direction: column;
+            }
+
+            .main-image,
+            .secondary-images {
+                flex: none;
+            }
+
+            .secondary-images {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            .map{
+                width: 100%;
+                height: auto;
+            }
+            .availability-calendar{
+                width: 100%;
+                height: auto;
+            }
+        }
+        @media (max-width: 480px) {
+            .container {
+                padding: 10px;
+            }
+
+            .header,
+            .abhi-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                align-items: flex-start;
+                margin-top: 10px;
+            }
+
+            .nav-links a {
+                margin: 5px 0;
+            }
+
+            .abhi-buttons {
+                flex-direction: column;
+                align-items: flex-start;
+                margin-top: 10px;
+            }
+
+            .abhi-buttons button {
+                margin: 5px 0;
+                width: 100%;
+            }
+
+            .abhi-images {
+                flex-direction: column;
+            }
+
+            .main-image,
+            .secondary-images {
+                flex: none;
+            }
+
+            .secondary-images {
+                flex-direction: column;
+            }
+
+            .secondary-images img {
+                width: 100%;
+            }
+
+            .secondary-images div {
+                flex-direction: column;
+                align-items: center;
+            }
+            .map{
+                width: 100%;
+                height: auto;
+            }
+            .availability-calendar{
+                width: 80%;
+                height: auto;
+            }
+          
+        }
+        @media (max-width: 768px) {
+            .footer-bottom {
+                flex-direction: column;
+                align-items: center;
+                padding: 20px;
+            }
+
+            .footer-bottom p {
+                margin-bottom: 10px;
+            }
+
+            .maheshfooter {
+                justify-content: center;
+                padding: 10px 0;
+            }
+
+            .maheshfooter img {
+                max-height: 25px;
+                padding-right: 5px;
+            }
+        }
+        @media (max-width: 480px) {
+            .footer-bottom {
+                padding: 10px;
+            }
+
+            .footer-bottom p {
+                font-size: 12px;
+            }
+
+            .maheshfooter {
+                flex-direction: column;
+                align-items: center;
+                gap: 5px;
+            }
+
+            .maheshfooter img {
+                max-height: 20px;
+            }
+        }
+        @media (max-width: 768px) {
+            .availability-calendar {
+                margin-bottom: 20px;
+            }
+
+            .availability-calendar img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .availability-calendar {
+                margin-bottom: 10px;
+                padding: 10px;
+            }
+
+            .availability-calendar img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+
+</style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="abhi-header">
+            <div class="logo">
+                <img src="vialogo.jpg" alt="Viators Logo">
+                <a href="#">viators</a>
+            </div>
+            <div class="nav-links">
+                <a href="#">Destinations</a>
+                <a href="#">Activities</a>
+                <a href="#">USD</a>
+                <a href="#">Sign up</a>
+                <a href="#">Log in</a>
+            </div>
+        </div>
+        <div class="abhi-breadcrumb">
+            <a href="#">Home</a>
+            <span>&gt;</span>
+            <a href="#">Tours</a>
+            <span>&gt;</span>
+            <a href="#">Phuket</a>
+        </div>
+        <div class="abhi-buttons">
+            <button class="bestseller">Bestseller</button>
+            <button class="free-cancellation">Free cancellation</button>
+        </div>
+        
+        <div class="abhi-header">
+            <div>
+                <div class="title"><b>Phi Phi Islands Adventure Day Trip with Seaview Lunch by V. Marine Tour</b></div>
+                <div class="details">4.8 (269) | Paris, France | 30K+ booked</div>
+            </div>
+            <div class="actions">
+                <button>Share</button>
+                <button>Wishlist</button>
+            </div>
+        </div>
+        <div class="abhi-images">
+            <div class="main-image">
+                <img src="boat.jpg" alt="Main Image">
+            </div>
+            <div class="secondary-images">
+                <img src="bbeach.jpg" alt="Secondary Image 1">
+                <div style="display: flex; justify-content: space-between;">
+                    <img src="windmill.jpg" style="width: 200px";alt="Secondary Image 3">
+                
+                    <img src="ggirl.jpg"  style="width: 200px"; alt="Secondary Image 2">
+                </div>
+                
+            </div>
+        </div>
+        <div class="aa-container">
+            <div class="info-section">
+                <div class="info-box">
+                    <span class="info-title">Duration</span>
+                    <span class="info-detail">3 days</span>
+                </div>
+                <div class="info-box">
+                    <span class="info-title">Group Size</span>
+                    <span class="info-detail">10 people</span>
+                </div>
+                <div class="info-box">
+                    <span class="info-title">Ages</span>
+                    <span class="info-detail">18-99 yrs</span>
+                </div>
+                <div class="info-box">
+                    <span class="info-title">Languages</span>
+                    <span class="info-detail">English, Japanese</span>
+                </div>
+            </div>
+            <div class="main-content">
+                <div class="tour-overview">
+                    <h2>Tour Overview</h2>
+                    <p>The Phi Phi archipelago is a must-visit while in Phuket, and this speedboat trip whisks you around the islands in one day. Swim over the coral reefs of Pileh Lagoon, have lunch at Phi Phi Leh, snorkel at Bamboo Island, and visit Monkey Beach and Maya Bay, immortalized in "The Beach." Boat transfers, snacks, buffet lunch, snorkeling equipment, and Phuket hotel pickup and drop-off all included.</p>
+                </div>
+                <div class="tour-highlights">
+                    <h3>Tour Highlights</h3>
+                    <ul>
+                        <li>Experience the thrill of a speedboat to the stunning Phi Phi Islands</li>
+                        <li>Be amazed by the variety of marine life in the archipelago</li>
+                        <li>Enjoy relaxing in paradise with white sand beaches and azure turquoise water</li>
+                        <li>Feel the comfort of a tour limited to 35 passengers</li>
+                        <li>Catch a glimpse of the wild monkeys around Monkey Beach</li>
+                    </ul>
+                </div>
+                <div class="whats-included">
+                    <h3>What's included</h3>
+                    <ul>
+                        <li>Beverages, drinking water, morning tea and buffet lunch</li>
+                        <li>Local taxes</li>
+                        <li>Hotel pickup and drop-off by air-conditioned minivan</li>
+                        <li>Insurance</li>
+                        <li>Transfer to a private pier</li>
+                        <li>Soft drinks</li>
+                        <li>Tour Guide</li>
+                        <li>Towel</li>
+                        <li>Tips</li>
+                        <li>Alcoholic Beverages</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="booking-section">
+                <div class="price">
+                    <span>From $1,200</span>
+                </div>
+                <div class="date-picker">
+                    <label for="date-from">From</label>
+                    <input type="date" id="date-from" name="date-from">
+                    <label for="date-time">Time</label>
+                    <input type="time" id="date-time" name="date-time">
+                </div>
+                <div class="tickets">
+                    <h4>Tickets</h4>
+                    <div class="ticket-option">
+                        <label for="adult">Adult (18+ years) $282.00</label>
+                        <input type="number" id="adult" name="adult" min="0">
+                    </div>
+                    <div class="ticket-option">
+                        <label for="youth">Youth (13-17 years) $168.00</label>
+                        <input type="number" id="youth" name="youth" min="0">
+                    </div>
+                    <div class="ticket-option">
+                        <label for="children">Children (0-12 years) $80.00</label>
+                        <input type="number" id="children" name="children" min="0">
+                    </div>
+                </div>
+                <div class="add-extra">
+                    <h4>Add Extra</h4>
+                    <div class="extra-option">
+                        <input type="checkbox" id="service-booking" name="service-booking">
+                        <label for="service-booking">Add Service per booking $40</label>
+                    </div>
+                    <div class="extra-option">
+                        <input type="checkbox" id="service-person" name="service-person">
+                        <label for="service-person">Add Service per person $40</label>
+                    </div>
+                </div>
+                <div class="total-price">
+                    <span>Total: $530.00</span>
+                </div>
+                <button class="book-now">Book Now</button>
+            </div>
+        </div>
+        <h2>Itinerary</h2>
+        <div class="itinerary">
+            <div class="day">
+                <div class="circle">1</div>
+                <div class="content">
+                    <h3>Day 1: Airport Pick Up</h3>
+                </div>
+            </div>
+            <div class="day">
+                <div class="circle">2</div>
+                <div class="content">
+                    <h3>Day 2: Temples & River Cruise</h3>
+                </div>
+            </div>
+            <div class="day">
+                <div class="circle">3</div>
+                <div class="content">
+                    <h3>Day 3: Massage & Overnight Train</h3>
+                    <p>Like on all of our trips, we can collect you from the airport when you land and take you directly to your hotel. The first Day is just a check-in Day so you have this freedom to explore the city and get settled in.</p>
+                </div>
+            </div>
+            <div class="day">
+                <div class="circle">4</div>
+                <div class="content">
+                    <h3>Day 4: Khao Sok National Park</h3>
+                </div>
+            </div>
+            <div class="day">
+                <div class="circle">5</div>
+                <div class="content">
+                    <h3>Day 5: Travel to Koh Phangan</h3>
+                </div>
+            </div>
+            <div class="day">
+                <div class="circle">6</div>
+                <div class="content">
+                    <h3>Day 6: Morning Chill & Muay Thai Lesson</h3>
+                </div>
+            </div>
+            <div class="day">
+                <div class="circle">7</div>
+                <div class="content">
+                    <h3>Day 7: Island Boat Trip</h3>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <h2>Tour Map</h2>
+        <div class="map">
+            <img src="map.jpg" width="60%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></img>
+        </div>
+        <div class="availability-calendar">
+            <h2>Availability Calendar</h2>
+            <img src="Dialog.jpg" alt="">
+        </div>
+
+        <div class="faq">
+            <h2>FAQ</h2>
+            <div class="faq-item">
+                <h3>Can I get the refund?</h3>
+                <p>Phang Nga Bay Sea Cave Canoeing & James Bond Island w/ Buffet Lunch by Big Boat cancellation policy: For a full refund, cancel at least 24 hours in advance of the start date of the experience. Discover and book Phang Nga Bay Sea Cave Canoeing & James Bond Island w/ Buffet Lunch by Big Boat.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Can I change the travel date?</h3>
+            </div>
+            <div class="faq-item">
+                <h3>When and where does the tour end?</h3>
+            </div>
+            <div class="faq-item">
+                <h3>Do you arrange airport transfers?</h3>
+            </div>
+        </div>
+        <section>
+            <div class="customer-reviews">
+                <h2>Customer Reviews</h2>
+                <div class="review-summary">
+                    <div class="overall-rating">
+                        <div class="rating-title">Overall Rating</div>
+                        <div class="rating-value"></div>
+                        <div class="rating-description">Excellent</div>
+                    </div>
+                    <div class="rating-details">
+                        <div class="rating-item">
+                            <div class="rating-title">Location</div>
+                            <div class="rating-value"> 5.0</div>
+                            <div class="rating-description">Excellent</div>
+                        </div>
+                        <div class="rating-item">
+                            <div class="rating-title">Amenities</div>
+                            <div class="rating-value">5.0</div>
+                            <div class="rating-description">Excellent</div>
+                        </div>
+                        <div class="rating-item">
+                            <div class="rating-title">Food</div>
+                            <div class="rating-value">5.0</div>
+                            <div class="rating-description">Excellent</div>
+                        </div>
+                        <div class="rating-item">
+                            <div class="rating-title">Price</div>
+                            <div class="rating-value">5.0</div>
+                            <div class="rating-description">Excellent</div>
+                        </div>
+                        <div class="rating-item">
+                            <div class="rating-title">Rooms</div>
+                            <div class="rating-value">5.0</div>
+                            <div class="rating-description">Excellent</div>
+                        </div>
+                        <div class="rating-item">
+                            <div class="rating-title">Tour Operator</div>
+                            <div class="rating-value">5.0</div>
+                            <div class="rating-description">Excellent</div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        
+            <div class="review">
+                <p class="reviewer"><img src="at.jpg" alt="alit">Ali Tutan - April 2023</p>
+                <p>Take this tour! It's fantastic! Great for 4-5 hours to explore. Really a lot to see and tons of photo spots. Even have a passport for you to collect all the stamps as a souvenir. Must see for a Harry Potter fan.</p>
+                <div class="review-images">
+                    <img src="image (2).jpg" alt="Review Image 1">
+                    <img src="image (3).jpg" alt="Review Image 2">
+                    <img src="image (4).jpg" alt="Review Image 3">
+                </div>
+                <div class="review-feedback">
+                    <span>Helpful</span>
+                    <span>Not helpful</span>
+                </div>
+            </div>
+            <div class="review">
+                <p class="reviewer"><img src="at.jpg" alt="alit">Ali Tutan - April 2023</p>
+                <p>Take this tour! It's fantastic! Great for 4-5 hours to explore. Really a lot to see and tons of photo spots. Even have a passport for you to collect all the stamps as a souvenir. Must see for a Harry Potter fan.</p>
+                <div class="review-images">
+                    <img src="image (2).jpg" alt="Review Image 1">
+                    <img src="image (3).jpg" alt="Review Image 2">
+                    <img src="image (4).jpg" alt="Review Image 3">
+                </div>
+                <div class="review-feedback">
+                    <span>Helpful</span>
+                    <span>Not helpful</span>
+                </div>
+            </div>
+            <div class="review">
+                <p class="reviewer"><img src="at.jpg" alt="alit">Ali Tutan - April 2023</p>
+                <p>Take this tour! It's fantastic! Great for 4-5 hours to explore. Really a lot to see and tons of photo spots. Even have a passport for you to collect all the stamps as a souvenir. Must see for a Harry Potter fan.</p>
+                <div class="review-images">
+                    <img src="image (2).jpg" alt="Review Image 1">
+                    <img src="image (3).jpg" alt="Review Image 2">
+                    <img src="image (4).jpg" alt="Review Image 3">
+                </div>
+                <div class="review-feedback">
+                    <span>Helpful</span>
+                    <span>Not helpful</span>
+                </div>
+            </div>
+            <section>
+                <div class="reply-container">
+                    <h2>Leave a Reply</h2>
+                    <p>Your email address will not be published. Required fields are marked *</p>
+        
+                    <form class="reply-form">
+                        <div class="rating-categories">
+                            <span>Location</span>
+                            <span>Amenities</span>
+                            <span>Food</span>
+                            <span>Room</span>
+                            <span>Price</span>
+                            <span>Tour Operator</span>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Name" required>
+                            <input type="email" name="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="title" placeholder="Title">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="comment" placeholder="Comment" rows="5" required></textarea>
+                        </div>
+                        <button type="submit">Post Comment</button>
+                    </form>
+                </div>
+            </section>
+            <section>
+                <h2>You might also like...</h2>
+        <div class="card-container">
+            <div class="card">
+                <img src="div.tourCard__image (6).jpg" alt="Centipede Tour - Guided Arizona Desert Tour by ATV">
+                <div class="card-info">
+                    <p>Paris, France</p>
+                    <h3>Centipede Tour - Guided Arizona Desert Tour by ATV</h3>
+                    <p class="rating">4.8 (243)</p>
+                    <p class="duration">4 days</p>
+                    <p class="price">From $189.25</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="1.jpg" alt="Molokini and Turtle Town Snorkeling Adventure Aboard">
+                <div class="card-info">
+                    <p>New York, USA</p>
+                    <h3>Molokini and Turtle Town Snorkeling Adventure Aboard</h3>
+                    <p class="rating">4.8 (243)</p>
+                    <p class="duration">4 days</p>
+                    <p class="price">From $225</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="div.tourCard__image (1).jpg" alt="Westminster Walking Tour & Westminster Abbey Entry">
+                <div class="card-info">
+                    <p>London, UK</p>
+                    <h3>Westminster Walking Tour & Westminster Abbey Entry</h3>
+                    <p class="rating">4.8 (243)</p>
+                    <p class="duration">4 days</p>
+                    <p class="price">From $943</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="div.tourCard__image.png" alt="All Inclusive Ultimate Circle Island Day Tour with Lunch">
+                <div class="card-info">
+                    <p>New York, USA</p>
+                    <h3>All Inclusive Ultimate Circle Island Day Tour with Lunch</h3>
+                    <p class="rating">4.8 (243)</p>
+                    <p class="duration">4 days</p>
+                    <p class="price">From $771</p>
+                </div>
+            </div>
+        </div>
+        </section>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-top">
+                    <p>Speak to our expert at <a href="tel:1-800-453-6744">1-800-453-6744</a></p>
+                    <p>Follow Us</p>
+                </div>
+                <div class="footer-content">
+                    <div class="footer-column">
+                        <h4>Contact</h4>
+                        <p>328 Queensberry Street, North Melbourne VIC3051, Australia.</p>
+                        <p><a href="mailto:hi@viatours.com">hi@viatours.com</a></p>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Tourz Reviews</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Travel Guides</a></li>
+                            <li><a href="#">Data Policy</a></li>
+                            <li><a href="#">Cookie Policy</a></li>
+                            <li><a href="#">Legal</a></li>
+                            <li><a href="#">Sitemap</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a href="#">Get in Touch</a></li>
+                            <li><a href="#">Help center</a></li>
+                            <li><a href="#">Live chat</a></li>
+                            <li><a href="#">How it works</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Newsletter</h4>
+                        <p>Subscribe to the free newsletter and stay up to date</p>
+                        <form>
+                            <input type="email" placeholder="Your email address">
+                            <button type="submit">Send</button>
+                        </form>
+                        <h4>Mobile Apps</h4>
+                        <p><a href="#">iOS App</a></p>
+                        <p><a href="#">Android App</a></p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>© Copyright Viatours 2024</p>
+                </div>
+                <div class="maheshfooter">
+                    <img src="visa.jpg" alt="Payment Methods">
+                    <img src="Footer.jpg" alt="Payment Methods">
+                    <img src="gpay.jpg" alt="Payment Methods">
+                    <img src="discover.jpg" alt="Payment Methods">
+                    <img src="paypal.jpg" alt="Payment Methods">
+                    <img src="amex.jpg" alt="Payment Methods">
+                </div>
+                    
+               
+            </div>
+        </footer>
+     </div>
+        
+        
+    
+</body>
+
+</html>
