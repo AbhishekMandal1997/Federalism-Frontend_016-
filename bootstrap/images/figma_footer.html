@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Details</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: black;
+            margin: 0;
+            padding: 0;
+        }
+
+     
+.footer {
+    background-color: #fff8f5;
+    padding: 20px 0;
+    color: #343a40;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid ;
+}
+
+.footer-top p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.footer-top a {
+    color: #ff5722;
+    text-decoration: none;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+
+.footer-column {
+    flex: 1 1 calc(25% - 20px);
+    margin-bottom: 20px;
+}
+
+.footer-column h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.footer-column p, .footer-column a, .footer-column li {
+    margin: 5px 0;
+    color: #6c757d;
+}
+
+.footer-column a {
+    text-decoration: none;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column form {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-column input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #eaeaea;
+    border-radius: 4px;
+}
+
+.footer-column button {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.footer-column button:hover {
+    background-color: #0056b3;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    padding: 20px 0;
+    border-top: 1px solid ;
+    
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 14px;
+    color: #6c757d;
+}
+
+.footer-bottom img {
+    max-height: 30px;
+    padding-right: 50px;
+    
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+    .footer-column {
+        flex: 1 1 calc(33.333% - 20px);
+    }
+}
+
+@media (max-width: 900px) {
+    .footer-column {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-top {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-column {
+        flex: 1 1 100%;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}  
+
+h2 {
+    color: #343a40;
+    margin-bottom: 20px;
+}
+
+.itinerary {
+    margin-bottom: 40px;
+}
+
+.day {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #ff5722;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+.content {
+    max-width: calc(100% - 45px);
+}
+
+.content h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: #343a40;
+}
+
+.content p {
+    margin: 0;
+    color: #6c757d;
+}
+
+.map {
+    margin-bottom: 40px;
+}
+
+@media (max-width: 600px) {
+    .day {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .circle {
+        margin-bottom: 10px;
+    }
+
+    .content {
+        max-width: 100%;
+    }
+}
+.aa-container {
+   
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.info-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.info-box {
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1;
+    min-width: 150px;
+    margin: 10px;
+}
+
+.info-title {
+    font-weight: bold;
+    color: #333;
+}
+
+.info-detail {
+    color: #666;
+}
+
+.main-content {
+    flex: 1;
+    min-width: 600px;
+}
+
+.tour-overview, .tour-highlights, .whats-included, .booking-section {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.tour-overview h2, .tour-highlights h3, .whats-included h3, .booking-section h4 {
+    margin-bottom: 10px;
+}
+
+.tour-highlights ul, .whats-included ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.booking-section {
+    max-width: 300px;
+    flex: none;
+    align-self: flex-start;
+}
+
+.price {
+    font-size: 24px;
+    color: #ff6600;
+    margin-bottom: 10px;
+}
+
+.date-picker {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.date-picker label {
+    margin-bottom: 5px;
+}
+
+.date-picker input {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.tickets, .add-extra {
+    margin-bottom: 20px;
+}
+
+.ticket-option, .extra-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.ticket-option label, .extra-option label {
+    flex: 1;
+}
+
+.ticket-option input, .extra-option input {
+    width: 60px;
+    padding: 5px;
+    text-align: right;
+}
+
+.total-price {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.book-now {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.book-now:hover {
+    background-color: #e65c00;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-content, .booking-section {
+        width: 100%;
+        max-width: none;
+        margin-bottom: 20px;
+    }
+
+    .main-content {
+        min-width: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .info-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-box {
+        margin: 10px 0;
+    }
+}
+.header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .details {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .abhi-images {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .abhi-images img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .main-image {
+            flex: 2;
+        }
+
+        .secondary-images {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .secondary-images img {
+            flex: 1;
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .images {
+                flex-direction: column;
+            }
+
+            .main-image,
+            .secondary-images {
+                flex: none;
+            }
+        }
+        .abhi-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .abhi-header a {
+            text-decoration: none;
+            color: #000;
+            margin: 5px 10px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            max-height: 40px;
+            margin-right: 10px;
+        }
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
+        .nav-links a {
+            margin: 0 15px;
+        }
+        .abhi-buttons {
+            display: flex;
+            align-items: center;
+        }
+        .abhi-buttons button {
+            border: none;
+            padding: 10px 15px;
+            margin: 0 5px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .bestseller {
+            background-color: orange;
+            color: white;
+        }
+        .free-cancellation {
+            background-color: lightgray;
+            color: black;
+        }
+        .abhi-breadcrumb {
+            margin: 20px 0;
+        }
+        .abhi-breadcrumb a {
+            text-decoration: none;
+            color: #000;
+        }
+        .abhi-breadcrumb span {
+            margin: 0 5px;
+        }
+        .title>h5{
+            text-align: end;
+            margin-bottom: 20px;
+        }
+</style>
+</head>
+
+<body>
+ 
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-top">
+                    <p>Speak to our expert at <a href="tel:1-800-453-6744">1-800-453-6744</a></p>
+                    <p>Follow Us</p>
+                </div>
+                <div class="footer-content">
+                    <div class="footer-column">
+                        <h4>Contact</h4>
+                        <p>328 Queensberry Street, North Melbourne VIC3051, Australia.</p>
+                        <p><a href="mailto:hi@viatours.com">hi@viatours.com</a></p>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Tourz Reviews</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Travel Guides</a></li>
+                            <li><a href="#">Data Policy</a></li>
+                            <li><a href="#">Cookie Policy</a></li>
+                            <li><a href="#">Legal</a></li>
+                            <li><a href="#">Sitemap</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a href="#">Get in Touch</a></li>
+                            <li><a href="#">Help center</a></li>
+                            <li><a href="#">Live chat</a></li>
+                            <li><a href="#">How it works</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Newsletter</h4>
+                        <p>Subscribe to the free newsletter and stay up to date</p>
+                        <form>
+                            <input type="email" placeholder="Your email address">
+                            <button type="submit">Send</button>
+                        </form>
+                        <h4>Mobile Apps</h4>
+                        <p><a href="#">iOS App</a></p>
+                        <p><a href="#">Android App</a></p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>© Copyright Viatours 2024</p>
+                    <img src="visa.jpg" alt="Payment Methods">
+                    <img src="visa.jpg" alt="Payment Methods">
+                    <img src="visa.jpg" alt="Payment Methods">
+                    <img src="visa.jpg" alt="Payment Methods">
+                    <img src="visa.jpg" alt="Payment Methods">
+                    <img src="visa.jpg" alt="Payment Methods">
+                </div>
+            </div>
+        </footer>
+     </div>
+        
+        
+    
+</body>
+
+</html>
