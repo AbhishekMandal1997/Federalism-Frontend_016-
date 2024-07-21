@@ -4,114 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Casio Watchcraft Watches</title>
-    <link rel="stylesheet" href="projectStyle.css">
+    <title>Watchcraft</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="../Federalism-Frontend_016-/bootstrap/images/est 2024.png ">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
-    <style>
+    <!-- <style>
         body {
     font-family: Arial, sans-serif;
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
     height: 100vh;
+    overflow-x: hidden;
+    background-color:black;
        
    
     
   }
-  /* /* nav {
-    background-color: #fff;
-    width: 100vw;
-    background: black;
-    color: white;
-
-
-  }
-  .adi-container {
-    max-width: 1300px;
-    margin: auto;
-
-  }
-  .adi-1st-nav {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    color: white;
-   
-
-
-  }
-  .adi-1st-nav a{
-     margin-left: 20px;     
-    cursor: pointer; 
-  }
-  .adi-2nd-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color:black; 
-    color: white; 
-    height: 60px;
-  }
-  .adi-2nd-nav img {
-    width: 100px; 
-    height: 100%; 
-    border-radius: 5px;
-  }
-
-  .adi-2nd-nav a{
-    color: white;
-    text-decoration: none;
-  }
-
-  .adi-2nd-nav input{
-    border-bottom: 2px solid white;
-    background:transparent;
-    color: white;
-    text-decoration: none;
-    box-shadow: none;
-  }
   
 
-  .adi-3rd-nav {
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
-    color: white; 
-    justify-content: space-between;
-    position: relative;
-  }
-  .adi-3rd-nav a{
-    text-decoration: none;
-    cursor: pointer; 
-    color: white;
-    padding: 10px 40px;
-
-  }
-  .adi-3rd-nav ul:nth-of-type(2){
-      margin-left: 50%;
-  }
-  .adi-4th-nav {
-   
-    position: sticky;
-    top: 0%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 100%;
-    color: white; 
-    background-color:black;
-
-  }
-  .adi-4th-nav a{
-    cursor: pointer; 
-
-  }  */
   nav {
         background-color: black;
         width: 100%;
+        background-image: url("https://images.unsplash.com/photo-1619776201527-2474c0dcbc93?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+       background-size:cover;
       }
       .adi-container {
         max-width: 1300px;
@@ -126,8 +45,10 @@
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        background-color: white;
+        background-color:black;
+        color: white;
         padding: 10px;
+
       }
       .adi-1st-nav ul {
         margin: 0 15px; /* Adjust spacing between items */
@@ -151,7 +72,7 @@
         font-size: 14px;
       }
       .adi-2nd-nav ul img {
-        width: 50px; /* Adjust logo size */
+        width: 100px; /* Adjust logo size */
         height: auto; /* Maintain aspect ratio */
       }
 
@@ -215,13 +136,13 @@
       }
       .slider {
         width: 100%;
-        height: 600px;
+        height: 400px;
         overflow: hidden;
         position: relative;
       }
       .slider img {
         width: 100%;
-        height: 600px;
+        height: 400px;
         position: absolute;
         animation: slide 20s infinite;
         opacity: 0;
@@ -291,7 +212,7 @@
         background-color: rgba(255, 255, 255, 0.734);
         text-align: center;
       }
-      @media (max-width: 768px) {
+      @media (max-width<=768px) {
         html,
         body {
           font-size: 14px;
@@ -326,64 +247,70 @@
 
   /* ---------------------Animation------------------------------------------- */
 
-  .text-container {
-    text-align: center;
-      background-color: black;
-      margin: 0;
-      padding: 20px;
-      cursor: pointer;
-      letter-spacing: 3px;
-      text-decoration: none;
-      font-size: 30px;
-      position: relative;
-      text-transform: uppercase;
-      color: rgba(255, 255, 255, 0.6); /* Initial text color */
-      -webkit-text-stroke: 1px rgba(255, 255, 255, 0.6);
-      filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.6)); /* Initial shadow */
-      transition: color 0.5s, -webkit-text-stroke-color 0.5s, filter 0.5s;
-    }
+    .text-container {
+            text-align: center;
+            background-color: black;
+            margin: 0;
+            padding: 20px;
+            cursor: pointer;
+            letter-spacing: 3px;
+            text-decoration: none;
+            font-size: 30px;
+            position: sticky;
+            top: 0;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.6);
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.6);
+            filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.6));
+            transition: color 0.5s, -webkit-text-stroke-color 0.5s, filter 0.5s;
+            z-index: 1000;
+        }
 
-  
-
-    .actual-text {
-      color: rgba(255, 255, 255, 0.6); /* Initial text color */
-      filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.6)); /* Initial shadow */
-      transition: color 0.5s, filter 0.5s;
-      font-size: 150px;
-    }
-
-    .hover-text {
-      position: absolute;
-      white-space: nowrap;
-      box-sizing: border-box;
-      color: #00d4ff; /* Neon blue color */
-      width: 0%;
-      height: 100%;
-      inset: 0;
-      border-right: 6px solid #00d4ff;
-      overflow: hidden;
-      transition: width 0.5s, border-color 0.5s;
-      -webkit-text-stroke: 1px #00d4ff;
-      filter: drop-shadow(0 0 10px #00d4ff); /* Neon shadow */
-    }
-
-    .text-container:hover .hover-text {
-      width: 100%;
-      filter: drop-shadow(0 0 30px #00d4ff); /* Increase the glow effect on hover */
-    }
-
-    .text-container:hover .actual-text {
-      color: transparent; /* Hide the initial text on hover */
-    }
-
-    .text-container:hover {
-      color: #00d4ff; /* Change the text color on hover */
-      -webkit-text-stroke-color: #00d4ff; /* Change the stroke color on hover */
-      filter: drop-shadow(0 0 100px #00d4ff); /* Increase the shadow on hover */
-    }
+        .actual-text {
+            color: rgba(255, 255, 255, 0.6);
+            filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.6));
+            transition: color 0.5s, filter 0.5s;
+            font-size: 150px;
+        }
 
 
-            /* Slider container */
+        .hover-text {
+            position: absolute;
+            white-space: nowrap;
+            box-sizing: border-box;
+            color: #00d4ff;
+            width: 0%;
+            height: 100%;
+            inset: 0;
+            border-right: 6px solid #00d4ff;
+            overflow: hidden;
+            transition: width 0.5s, border-color 0.5s;
+            -webkit-text-stroke: 1px #00d4ff;
+            filter: drop-shadow(0 0 10px #00d4ff);
+        }
+
+        .text-container.scrolled .hover-text {
+            width: 100%;
+            filter: drop-shadow(0 0 30px #00d4ff);
+        }
+
+        .text-container.scrolled .actual-text {
+            color: transparent;
+        }
+
+        .text-container.scrolled {
+            color: #00d4ff;
+            -webkit-text-stroke-color: #00d4ff;
+            filter: drop-shadow(0 0 100px #00d4ff);
+        }
+
+
+      
+
+    /* ===============================================================================  */
+
+
+            
 .slider-container {
     position: relative;
     width: 100%;
@@ -428,6 +355,8 @@
 
 
 
+
+
 /* ----------------------------------------------------------------NAVBAR END ADIYA--------------------------------------------------------- */
 
 /* ----------------------------------------------------------------Main start Abhishek part--------------------------------------------------------- */
@@ -436,19 +365,22 @@
 /* ========================================================================himanshi and abhishek============================================= */
 
         main {
-            width: 100vw;
+            max-width: 1300px;
             display: flex;
+            margin: auto;
             justify-content: center;
             align-items: center;
             height: 900px;
-            background-color: #f0f0f0;
+            /* background-color: #000000; */
+            background-image: url("https://images.unsplash.com/photo-1543956872-37cfc5474a71?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+            background-size: contain;
         }
         .parent-container {
             width: 1300px;
             height: 900px;
             background-color: #ffffff;
             display: flex;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 8px rgba(103, 88, 88, 0.1);
             border-radius: 8px;
             overflow: hidden;
         }
@@ -456,34 +388,49 @@
             display: flex;
             height: 100%;
             width: 100%;
+            background-color:black;
         }
         .sidebar-container {
             height: 100%;
             overflow-y: auto;
             overflow-x: hidden;
             width: 350px;
+            background-color: black;
         }
         .sidebar {
             width: 100%;
             height: 100%;
-            background-color: #f4f4f4;
+            /* background-color: #f4f4f4; */
+            background-color: black;
             padding: 10px;
             box-sizing: border-box;
         }
+        .sidebar h2 {
+        color:#00d4ff; 
+         margin-bottom: 20px;
+}
         .content {
             flex-grow: 1;
             height: 100%; /* Use 100% to fill the parent container */
             overflow-y: auto; /* Enable vertical scrolling */
             padding: 20px;
+            width: 100%;
+            
+          
         }
         .sidebar div {
             padding: 10px;
             margin-bottom: 10px;
-            background-color: #e4e4e4;
+            /* background-color: #e4e4e4; */
             border: 1px solid #ccc;
+            background-color: rgb(0, 0, 0);
+            color: white;
+          
         }
-        .sidebar div:hover {
-            background-color: #ddd;
+        .sidebar .abi-outer:hover {
+            background-color:#00d5ff;
+            color: black;
+            border: 1px solid black;
         }
         .radio-group {
             margin-top: 10px;
@@ -511,32 +458,38 @@
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
             gap: 10px;
+            background-color: black;
         }
         .watch-card {
             text-align: center;
             margin-bottom: 20px;
             padding: 20px;
             transition: transform 0.3s, box-shadow 0.5s;
-            background: white;
+            background: rgb(0, 0, 0);
             border-radius: 8px;
             position: relative;
+            color: white;
+            border: 1px solid wheat;
         }
         .watch-card:hover {
             transform: translateY(-10px);
-            box-shadow: rgb(42, 42, 77) 0px 50px 100px -20px,
-                        rgba(0, 0, 0, 0.682) 0px 30px 60px -30px,
-                        rgb(10, 37, 64) 0px -2px 6px 0px inset;
+            box-shadow: rgb(66, 178, 190) 0px 50px 100px -20px,
+                        rgba(103, 218, 231, 0.682) 0px 30px 60px -30px,
+                        rgb(60, 234, 205) 0px -2px 6px 0px inset;
+            border: 3px solid rgb(89, 51, 191);
+    
         }
         .watch-image {
             max-width: 100%;
             height: auto;
-            background-color: #f7f8fa;
+            background-color:black;
+
         }
         .watch-name {
             font-weight: bold;
         }
         .watch-price {
-            color: gray;
+            color: rgb(176, 193, 169);
         }
         .new-label {
             position: absolute;
@@ -545,8 +498,253 @@
             padding-left: 5px;
             font-size: 0.8rem;
             font-weight: bold;
-            background: #ff0;
+            background: rgb(139, 92, 198);
         }
+
+
+
+/* ----------------------------------------------------------------sction images START MAHESH-------------------------------------------------- */
+.image-container {
+            width: 1300px;
+            position: relative;
+            height: 500px; /* Increase height for scrolling */
+           
+        }
+        .scroll-image {
+            position: sticky;
+            margin: 10px;
+            top: 0;
+            left: 0;
+            /* width: 100%; */
+            width: 300px;
+            /* width: 100%; */
+            height: 200px;
+            opacity: 0;
+            border: 2px solid black;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        /* Animation on scroll */
+        .scroll-image:nth-of-type(1) { z-index: 1; }
+        .scroll-image:nth-of-type(2) { z-index: 2; }
+        .scroll-image:nth-of-type(3) { z-index: 3; }
+        .scroll-image:nth-of-type(4) { z-index: 4; }
+        .scroll-image:nth-of-type(5) { z-index: 5; }
+        .scroll-image:nth-of-type(6) { z-index: 6; }
+        .scroll-image:nth-of-type(7) { z-index: 7; }
+        .scroll-image:nth-of-type(8) { z-index: 8; }
+        .scroll-image:nth-of-type(9) { z-index: 9; }
+        .scroll-image:nth-of-type(10) { z-index: 10; }
+        
+        .scroll-image:hover {
+            transform: scale(1.5);
+            z-index: 100;
+        
+            
+        }
+        .scroll-image {
+            opacity: 1;
+            transform: translateY(0);
+
+        }
+
+
+        @media (max-width: 768px) {
+            .image-container {
+                height: auto;
+            }
+
+            .scroll-image {
+                max-width: 200px;
+                transform: translateY(10px);
+            }
+
+            .actual-text {
+                font-size: 80px;
+            }
+
+            .text-container {
+                font-size: 20px;
+            }
+
+            .hover-text {
+                border-right: 3px solid #00d4ff;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .scroll-image {
+                max-width: 100px;
+                transform: translateY(5px);
+            }
+
+            .actual-text {
+                font-size: 50px;
+            }
+
+            .text-container {
+                font-size: 18px;
+            }
+
+            .hover-text {
+                border-right: 2px solid #00d4ff;
+            }
+        }
+
+
+        @media (max-width: 768px) {
+            .image-container {
+                width: auto;
+                height: auto;
+            }
+
+            .scroll-image {
+                max-width: 200px;
+                transform: translateY(10px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .scroll-image {
+                max-width: 100px;
+                transform: translateY(5px);
+            }
+        }
+
+
+/* 
+
+/* ------------------------------------------------------------------------------------------- */
+
+        .brand {
+            position: relative;
+            width: 1300px; /* Full viewport width */
+            height: 100px; /* Height of the container */
+            overflow: hidden;
+            margin: auto;
+            margin-bottom: 80px;
+            border: 1px solid black;
+
+        }
+        .brand-images {
+            display: flex;
+            width: calc(60px * 20); /* 10 images + 10 duplicate images */
+            height: 100%;
+            animation: scroll 20s linear infinite;
+        }
+       
+
+
+
+        .brand-images img {
+            
+            margin: 15px;
+            width: 100%; /* Width of each image */
+            height: auto;  /* Height of each image */
+            object-fit: cover;
+            animation: bounce 1s ease infinite;
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+            border-radius: 10px;
+        }
+
+
+         
+        
+
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        .brand:hover .brand-images {
+            animation-play-state: paused; /* Pause the scrolling animation on hover */
+        }
+        .brand-images img:hover {
+            transform: scale(2, 3) translateY(-10px); /* Scale and apply a slight bounce */lti
+            box-shadow: 0 4px 12px rgba(154, 155, 74, 0.5); /* Box shadow effect */
+            box-shadow: 0px 2px 8px 0px rgba(224, 75, 82, 0.5), 0px 4px 16px 0px rgba(224, 75, 82, 0.5);
+            animation-play-state: paused; /* Pause the scrolling animation on hover */
+        }
+
+
+        section.multi-images{
+          background-image: url("https://r.mobirisesite.com/573247/assets/images/photo-1708647585543-bee62dc16136.jpeg");
+          background-size: cover;
+          
+        }
+
+
+      
+
+        .partnership-heading {
+            background-color: rgb(97, 97, 97);
+            width: 100%;
+            margin: auto;
+            color: white;
+            text-align: center;
+        }
+
+        
+        @media (max-width: 768px) {
+
+          .brand {
+                width: 90%;
+            }
+            .partnership-heading h1 {
+                font-size: 36px;
+                padding: 10px;
+            }
+            div.partnership-heading{
+                  width: 60%;
+                }
+
+                .brand-images img {
+                margin: 10px;
+            }
+            .partnership-heading {
+                margin-bottom: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+          .brand {
+                width: 100%;
+            }
+
+            .partnership-heading h1 {
+                font-size: 28px;
+                padding: 10px;
+
+            }
+
+            div.partnership-heading{
+                  width: auto;
+                }
+
+                .brand-images img {
+                margin: 5px;
+            }
+        }
+
+
+
+/* 
+        ------------------------------------------------------- */
+        
+      
 /* ----------------------------------------------------------------FOOTER START MAHESH-------------------------------------------------- */
 .footer {
             background-color: #343a40;
@@ -599,68 +797,13 @@
 
 
 
-    </style>
+    </style> -->
 
 </head>
 <!-- /* ------------------------------------------------Aditya Thakur(Start)---------------------------------------------------------- */ -->
 
 <body>
-    <!-- <nav>
-        <div class="adi-container">
-            <div class="adi-1st-nav">
-                <a>Support</a>
-                <a>Corporate</a>
-            </div>
-            <div class="adi-2nd-nav">
-                <img src="logo.png" alt="logo">
-                <a href="">Watches</a>
-                <a href="">Electronic Musical Instruments</a>
-                <a href="">Calculators</a>
-                <a href="">Label Printers & Others</a>
-                
-                <span><input type="text" placeholder="Search"><i class="fas fa-search" style="padding: 10px;"></i></span>
-                <span style="margin-right: 10px;"><i class="far fa-heart"></i></span>
-            </div>
-            <div class="slider-container">
-                <img src="image1.png" alt="Image 1" class="slide-image">
-                <img src="image2.png" alt="Image 2" class="slide-image">
-                <img src="image3.png" alt="Image 3" class="slide-image">
-                <img src="logo.png" alt="Image 4" class="slide-image">
-            </div>
 
-            <div class="text-container">
-                <pre><span class="actual-text" >&nbsp;WatchCraft
- <span style="font-size: 20px; ">premium Time</span>&nbsp;</span></pre> 
-                     <span class="hover-text">&nbsp; &nbsp;</span>
-              </div>
-            <div class="adi-3rd-nav">
-                <h1 style="padding: 20px;">WATCHCRAFT</h1>
-                <div style="display:flex; align-items: center; justify-content: space-around;">
-                <a>Watchcraft Brand Site</a>
-                <a>Store Search</a>
-                <a>Support</a>
-                <a>Servicesa</a>
-                </div>
-        
-                
-            </div>
-            <hr>
-            <div class="adi-4th-nav">
-                <a>NEW PRODUCTS</a>
-                <a>Watchcraft</a>
-                <a>BABY-G</a>
-                <a>PRO TREK</a>
-                <a>EDIFICE</a>
-                <a>SHEEN</a>
-                <a>CASIO</a>
-                <a>VINTAGE</a>
-                <a>ENTICER</a>
-                <a>YOUTH</a>
-                <a>CLOCK</a>
-            </div>
-            <hr>
-        </div>
-    </nav> -->
     <nav>
         <div class="adi-container">
           
@@ -679,7 +822,7 @@
           </div>
           <div class="adi-2nd-nav">
             <ul>
-              <img src="./bootstrap/images/watches logo.jpg" alt="logo" />
+              <img src="../Federalism-Frontend_016-/bootstrap/images/Final Logo.png" alt="logo" />
             </ul>
             <ul>
               watchcraft
@@ -706,18 +849,25 @@
           </div>
   
           <div class="slider">
-            <img src="./bootstrap/images/watches01.jpg" alt="watch1" />
-            <img src="./bootstrap/images/watchcraft2.png" alt="watch2" />
-            <img src="./bootstrap/images/watches03.jpg" alt="watch3" />
-            <img src="./bootstrap/images/watches02.jpg" alt="watch4" />
-            <a class="arrow left" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="arrow right" onclick="plusSlides(1)">&#10095;</a>
+            <img
+            src="https://www.fratellowatches.com/cdn-cgi/image/anim=false,w=1680,h=756,fit=crop,side=auto,dpr=1/wp-content/uploads/2024/06/Oris-Divers-Sixty-Five-Cal-400-38mm-7.jpg"
+             alt="watch1">
+            <img src="https://justintime.in/cdn/shop/files/rado_homepage_banner_1500x.png?v=1714375687" alt="watch2" />
+            <img src="https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Library-Sites-TitanSharedLibrary/default/dw1a4d037d/images/homepage/All_Banners/Workwear_July_D.jpg" alt="watch3" />
+            <img src="https://images.ethoswatches.com/img/uploads/banners/2024/06/ethoswatches_desktop18_06_2024_0936054972.jpg" alt="watch4" />
+            <!-- <a class="arrow left" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="arrow right" onclick="plusSlides(1)">&#10095;</a> -->
           </div>
-          <div class="text-container">
+          <!-- <div class="text-container">
             <pre><span class="actual-text" >&nbsp;WatchCraft
  <span style="font-size: 30px; ">premium Watches</span>&nbsp;</span></pre> 
                  <span class="hover-text">&nbsp; &nbsp;</span>
-          </div>
+          </div> -->
+          <div class="text-container">
+            <div class="hover-text">WATCHCRAFT</div>
+            <div class="actual-text">Premium Watch</div>
+        </div>
+
           <div class="adi-3rd-nav">
             <ul>
               <h1>WatchCraft</h1>
@@ -737,7 +887,7 @@
               >
             </ul>
           </div>
-          <hr />
+          <!-- <hr /> -->
           <div class="adi-4th-nav">
             <ul>
               <a onclick="plusSlides(-1)">&#10094;</a>
@@ -774,17 +924,18 @@
               Clock
             </ul>
           </div>
-          <hr />
+          <!-- <hr /> -->
         </div>
       </nav>
 <!-- -----------------------------------------------------Main--------------------------------------- -->
-    <main>
+<div class="sunday">   
+<main>
         <div class="parent-container">
             <div class="container-main">
                 <div class="sidebar-container">
                     <div class="sidebar">
-                        <h2>Sidebar Menu</h2>
-                        <div>
+                        <h2 style="color: white;">Filters</h2>
+                        <div class="abi-outer">
                             <p><b>Sort</b></p>
                             <div class="radio-group">
                                 <label><input type="radio" name="group1" value="1"> Newest</label>
@@ -794,7 +945,7 @@
                                 <label><input type="radio" name="group1" value="5"> Weight: light-Heavy</label>
                             </div>
                         </div>
-                        <div>
+                        <div class="abi-outer">
                             <p><b>Price Range</b></p>
                             <div class="radio-group">
                                 <label><input type="radio" name="group2" value="1"> ₹5000 - ₹10000</label>
@@ -804,7 +955,7 @@
                                 <label><input type="radio" name="group2" value="5"> ₹40000 - ₹50000</label>
                             </div>
                         </div>
-                        <div>
+                        <div class="abi-outer">
                             <p><b>Display Type</b></p>
                             <div class="radio-group">
                                 <label><input type="radio" name="group3" value="1"> Analog</label>
@@ -812,7 +963,7 @@
                                 <label><input type="radio" name="group3" value="3"> Digital and analog</label>
                             </div>
                         </div>
-                        <div>
+                        <div class="abi-outer">
                             <p><b>Functions</b></p>
                             <div class="radio-group">
                                 <label><input type="radio" name="group4" value="1"> Solar Charge</label>
@@ -823,7 +974,7 @@
                                 <label><input type="radio" name="group4" value="6"> Moon Data</label>
                             </div>
                         </div>
-                        <div>
+                        <div class="abi-outer">
                             <p><b>Bezel Color</b></p>
                             <div class="radio-group">
                                 <label><input type="radio" name="group5" value="1"> Black</label>
@@ -841,7 +992,7 @@
                                 <label><input type="radio" name="group5" value="13"> Copper</label>
                             </div>
                         </div>
-                        <div>
+                        <div class="abi-outer">
                             <p><b>Series</b></p>
                             <div class="radio-group">
                                 <label><input type="radio" name="group6" value="1"> MT-G</label>
@@ -851,7 +1002,7 @@
                                 <label><input type="radio" name="group6" value="5"> MASTER OF G</label>
                             </div>
                         </div>
-                        <div>
+                        <div class="abi-outer">
                             <p><b>Time Adjustment</b></p>
                             <div class="radio-group">
                                 <label><input type="radio" name="group7" value="1"> GPS satellite radio reception</label>
@@ -859,7 +1010,7 @@
                                 <label><input type="radio" name="group7" value="3"> Option 3</label>
                             </div>
                         </div>
-                        <div>
+                        <div class="abi-outer">
                             <p><b>Sensor feature</b></p>
                             <div class="radio-group">
                                 <label><input type="radio" name="group8" value="1"> Direction</label>
@@ -869,14 +1020,14 @@
                                 <label><input type="radio" name="group8" value="5"> Water depth</label>
                             </div>
                         </div>
-                        <div>
+                        <div class="abi-outer">
                             <p><b>Characteristics</b></p>
                             <div class="radio-group">
                                 <label><input type="radio" name="group9" value="1"> Carbon materials</label>
                                 <label><input type="radio" name="group9" value="2"> Collaboration model</label>
                             </div>
                         </div>
-                        <div>
+                        <div class="abi-outer">
                             <p><b>Water resistance function</b></p>
                             <div class="radio-group">
                                 <label><input type="radio" name="group10" value="1"> Water resistance for ISO 200m submersion</label>
@@ -1044,14 +1195,116 @@
                             </p>
                             <p class="watch-price">₹ 11,495 (incl. of all taxes)</p>
                         </div>
+                        <div class="position-relative watch-card">
+                          <span class="new-label">NEW</span>
+                          <img
+                              src="https://www.casio.com/content/dam/casio/product-info/locales/in/en/timepiece/product/watch/G/GR/GRB/gr-b300-1a/assets/GR-B300-1A.png.transform/product-panel/image.png"
+                              alt="GA-2100MNG-7A"
+                              class="watch-image"
+                          />
+                          <p class="watch-name">
+                              Watchcraft<br />GA-2100MNG-7A
+                          </p>
+                          <p class="watch-price">₹ 11,495 (incl. of all taxes)</p>
+                      </div>
+                      <div class="position-relative watch-card">
+                        <span class="new-label">NEW</span>
+                        <img
+                            src="https://www.casio.com/content/dam/casio/product-info/locales/in/en/timepiece/product/watch/G/GR/GRB/gr-b300-1a/assets/GR-B300-1A.png.transform/product-panel/image.png"
+                            alt="GA-2100MNG-7A"
+                            class="watch-image"
+                        />
+                        <p class="watch-name">
+                            Watchcraft<br />GA-2100MNG-7A
+                        </p>
+                        <p class="watch-price">₹ 11,495 (incl. of all taxes)</p>
+                    </div><div class="position-relative watch-card">
+                      <span class="new-label">NEW</span>
+                      <img
+                          src="https://www.casio.com/content/dam/casio/product-info/locales/in/en/timepiece/product/watch/G/GR/GRB/gr-b300-1a/assets/GR-B300-1A.png.transform/product-panel/image.png"
+                          alt="GA-2100MNG-7A"
+                          class="watch-image"
+                      />
+                      <p class="watch-name">
+                          Watchcraft<br />GA-2100MNG-7A
+                      </p>
+                      <p class="watch-price">₹ 11,495 (incl. of all taxes)</p>
+                  </div>
                         <!-- Add more watch cards here -->
                     </div>
                 </div>
             </div>
         </div>
     </main>
+</div> 
+
 
  <!-- -----------------------------------------------------Main End--------------------------------------- -->
+ <div class="partnership-heading" >
+  <h1>New Arrivals Showcase </h1>
+</div>
+
+ <section class="multi-images" style="background-color: black;">
+
+  <div class="image-container" style="margin: auto;">
+    <img src="https://r.mobirisesite.com/573247/assets/images/photo-1583499710956-e508414bb1d7.jpeg" alt="Image 1" class="scroll-image">
+    <img src="https://r.mobirisesite.com/573247/assets/images/photo-1630168355938-8a482bdfa6b8.jpeg" alt="Image 2" class="scroll-image">
+    <img src="https://r.mobirisesite.com/573247/assets/images/photo-1516461240763-822a87484851.jpeg" alt="Image 3" class="scroll-image">
+    <img src="https://images.unsplash.com/photo-1473635540888-4035a1cc72fc?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 4" class="scroll-image">
+    <img src="https://r.mobirisesite.com/573247/assets/images/photo-1608376113748-c858c0745789.jpeg" alt="Image 5" class="scroll-image">
+    <img src="https://r.mobirisesite.com/573247/assets/images/photo-1607850478432-a80d4ff5aa41.jpeg" alt="Image 6" class="scroll-image">
+    <img src="https://images.unsplash.com/photo-1583499710956-e508414bb1d7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzB8fHdhdGNoZXMlMjByZWFjdGFuZ2xlaW1hZ2VzfGVufDB8fDB8fHww" alt="Image 7" class="scroll-image">
+    <img src="https://images.unsplash.com/photo-1699551594228-e3fac9c0e298?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 8" class="scroll-image">
+    <!-- <img src="https://media.istockphoto.com/id/92025619/photo/steel-chronograph-watch.jpg?s=612x612&w=0&k=20&c=LwrPUagJWOsp8O1KLrwl3j4T7enP1VOe-JV9fGdunUg=" alt="Image 9" class="scroll-image">
+    <img src="https://media.istockphoto.com/id/615251418/photo/banner-with-swiss-watches.jpg?s=612x612&w=0&k=20&c=hr18nv_6vFZHB16ekOBGsi4fIOmDVKYp1mgrwdsg3rM=" alt="Image 10" class="scroll-image">
+    <img src="https://media.istockphoto.com/id/180844253/photo/wrist-watch.jpg?s=1024x1024&w=is&k=20&c=XOU4r3arwrMipIxjKlDDQ0Hf3I6uBW9kzNX-2Y0UlKg=" alt="Image 11" class="scroll-image">
+    <img src="https://media.istockphoto.com/id/119870047/photo/stainless-steel-watch.jpg?s=612x612&w=0&k=20&c=N9bC0LXNZUf1VON2EqSrMek1tPgqwCb2NMrENeLu4LY=" alt="Image 12" class="scroll-image">
+    <img src="https://media.istockphoto.com/id/904688826/photo/wrist-watch.jpg?s=612x612&w=0&k=20&c=yT0JJjN_3Icm_2NIeYhSrvab3Q0RG43AHMSX4nr6zxk=" alt="Image 13" class="scroll-image">
+    <img src="https://media.istockphoto.com/id/139975443/photo/watch-sports-chronograph.jpg?s=612x612&w=0&k=20&c=D8XwsYc0TDlwnGItGDEvwVRIABhCsyooyFoMX6deBCE=" alt="Image 14" class="scroll-image">
+    <img src="https://media.istockphoto.com/id/1165199258/photo/watch.jpg?s=612x612&w=0&k=20&c=qTrBEuzPZtRxTPXS-_BvyuuPqeKVbqxJ2Q4JR42AKtE=" alt="Image 15" class="scroll-image">
+    <img src="https://media.istockphoto.com/id/1128617746/photo/woman-watch-with-diamond-on-black-background.jpg?s=612x612&w=0&k=20&c=RdXR8Fn1fpIMCXSDtY6Tfk1l7za8Oo6895agE5pZQbs=" alt="Image 16" class="scroll-image"> -->
+</div>
+
+
+
+
+
+<div class="partnership-heading"  >
+  <h1 >Luxury Partnerships </h1>
+</div> 
+
+
+
+
+
+<div class="brand" ">
+  <div class="brand-images">
+      <!-- First set of images -->
+      <img src="https://r.mobirisesite.com/573247/assets/images/photo-1617727553252-65863c156eb0.jpeg" alt="Image 1">
+      <img src="https://r.mobirisesite.com/573247/assets/images/photo-1554463529-e27854014799.jpeg" alt="Image 2">
+      <img src="https://r.mobirisesite.com/573247/assets/images/photo-1529612700005-e35377bf1415.jpeg" alt="Image 3">
+      <img src="https://r.mobirisesite.com/573247/assets/images/photo-1606136968306-ab2868cc1f21.jpeg" alt="Image 4">
+      <img src="https://r.mobirisesite.com/573247/assets/images/photo-1681415851723-dca11d0ec9a6.jpeg" alt="Image 5">
+      <img src="https://r.mobirisesite.com/573247/assets/images/photo-1596622723231-b20320c7346b.jpeg" alt="Image 6">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMa2G4bIWAM7W454k-Iw68JNpFOj1uoJ9uMQ&s" alt="Image 7">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSIAn9MfihJ8M1RibPFE54wwo-xBN6CZdIuw&s" alt="Image 8">
+      <img src="https://www.logodesignteam.com/blog/wp-content/uploads/2018/09/coca-cola-logo.jpg" alt="Image 9">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZfhdRHIU3wYPUbtoUms252ntPLpZJJi1NKg&s" alt="Image 10">
+      <!-- Duplicated set of images for seamless scrolling -->
+      <img src="https://r.mobirisesite.com/573247/assets/images/photo-1617727553252-65863c156eb0.jpeg" alt="Image 1">
+      <img src="https://r.mobirisesite.com/573247/assets/images/photo-1554463529-e27854014799.jpeg" alt="Image 2">
+      <img src="https://r.mobirisesite.com/573247/assets/images/photo-1529612700005-e35377bf1415.jpeg" alt="Image 3">
+      <img src="https://r.mobirisesite.com/573247/assets/images/photo-1606136968306-ab2868cc1f21.jpeg" alt="Image 4">
+      <img src="https://r.mobirisesite.com/573247/assets/images/photo-1681415851723-dca11d0ec9a6.jpeg" alt="Image 5">
+      <img src="https://r.mobirisesite.com/573247/assets/images/photo-1596622723231-b20320c7346b.jpeg" alt="Image 6">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMa2G4bIWAM7W454k-Iw68JNpFOj1uoJ9uMQ&s" alt="Image 7">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSIAn9MfihJ8M1RibPFE54wwo-xBN6CZdIuw&s" alt="Image 8">
+      <img src="https://www.logodesignteam.com/blog/wp-content/uploads/2018/09/coca-cola-logo.jpg" alt="Image 9">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZfhdRHIU3wYPUbtoUms252ntPLpZJJi1NKg&s" alt="Image 10">
+  </div>
+</div>
+
+ </section>
 
  <!-- -----------------------------------------------------footer start mahesh--------------------------------------- -->
 
@@ -1112,7 +1365,7 @@
         <div class="row mt-3">
             <div class="col-12">
                 <p class="bottom-text">
-                    © 2024 Casio India Co., Pvt. Ltd.<br>
+                    © 2024 Watchcraft India Co., Pvt. Ltd.<br>
                     Please help us recycle e-waste and plastic waste responsibly.<br>
                     For more information or e-waste pick up, please call 1800 2022746 or <a href="#">click here</a> for more details.
                 </p>
@@ -1122,6 +1375,12 @@
 </footer>
 
 <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script>
+  window.addEventListener('scroll', function () {
+      const textContainer = document.querySelector('.text-container');
+      textContainer.classList.toggle('scrolled', window.scrollY > 0);
+  });
+</script>
 
 
 
