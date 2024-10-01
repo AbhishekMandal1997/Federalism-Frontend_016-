@@ -14,6 +14,9 @@ HTML5
 CSS
 JavaScript and bootstrap framework
 
+##Netlify Link:
+https://66dd4441366cde50b303f328--aquamarine-maamoul-81f646.netlify.app/
+
 
 ## Video Walkthrough of the project:
 link:https://www.youtube.com/watch?v=ETY662pSyHo&ab_channel=AbhishekMandal
