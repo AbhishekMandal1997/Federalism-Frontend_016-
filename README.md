@@ -30,3 +30,5 @@ Product Details: View detailed information for each watch, including specificati
 Disclaimer:
 
 This project is a reimplementation of design elements and functionalities inspired by the G-Shock website. It is not an official G-Shock product and does not infringe on their intellectual property. The purpose is for educational and portfolio development purposes only.
+-Below there is image of project:
+![image](https://github.com/user-attachments/assets/0d31718f-f84e-428f-b44c-4fb7a96d9f03)
